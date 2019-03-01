@@ -1,3 +1,12 @@
+requirements:
+	sudo apt install libboost-all-dev libwebsocketpp-dev scons
+
+build:
+	scons
+
+install:
+	sudo cp ./wsperf /usr/local/bin/wsperf
+
 clean:
 	rm -f result*.json
 	sudo rm -f perf*

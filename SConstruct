@@ -199,7 +199,7 @@ else:
 # if the build system is known to allow the isystem modifier for library include
 # values then use it for the boost libraries. Otherwise just add them to the
 # regular CPPPATH values.
-if env['CXX'].startswith('g++') or env['CXX'].startswith('clang'):
+if False and (env['CXX'].startswith('g++') or env['CXX'].startswith('clang')):
 	env.Append(CPPFLAGS = '-isystem ' + env['BOOST_INCLUDES'])
 else:
 	env.Append(CPPPATH = [env['BOOST_INCLUDES']])
@@ -208,7 +208,7 @@ env.Append(LIBPATH = [env['BOOST_LIBS']])
 # if the build system is known to allow the isystem modifier for library include
 # values then use it for the boost libraries. Otherwise just add them to the
 # regular CPPPATH values.
-if env_cpp11['CXX'].startswith('g++') or env_cpp11['CXX'].startswith('clang'):
+if False and (env_cpp11['CXX'].startswith('g++') or env_cpp11['CXX'].startswith('clang')):
 	env_cpp11.Append(CPPFLAGS = '-isystem ' + env_cpp11['BOOST_INCLUDES'])
 else:
 	env_cpp11.Append(CPPPATH = [env_cpp11['BOOST_INCLUDES']])
